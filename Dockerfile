@@ -14,7 +14,8 @@ RUN apt-get update -y \
     fontconfig \
     lmodern \
     unzip \
-    curl
+    curl \
+    poppler-utils
 
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
