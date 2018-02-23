@@ -29,6 +29,3 @@ RUN curl -o /root/.pandoc/templates/eisvogel.latex https://raw.githubusercontent
 
 WORKDIR /source
 
-ENTRYPOINT ["/root/.cabal/bin/pandoc"]
-
-CMD ["--help"]
