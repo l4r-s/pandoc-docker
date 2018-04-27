@@ -18,13 +18,13 @@ RUN apt-get update -y \
     poppler-utils
 
 RUN apt-get install -y texlive-lang-german
-
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "1.19.2.1"
+ENV PANDOC_VERSION "2.1.3"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
+#RUN apt-get install -y texlive-generic-recommended
 
 # install eisvogel template
 RUN mkdir -p /root/.pandoc/templates
