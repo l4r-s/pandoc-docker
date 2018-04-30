@@ -24,7 +24,7 @@ ENV PANDOC_VERSION "2.2"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
-#RUN apt-get install -y texlive-generic-recommended
+RUN apt-get install -y texlive-generic-recommended
 
 # install eisvogel template
 RUN mkdir -p /root/.pandoc/templates
