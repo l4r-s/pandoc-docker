@@ -20,7 +20,7 @@ RUN apt-get update -y \
 RUN apt-get install -y texlive-lang-german
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "2.1.3"
+ENV PANDOC_VERSION "2.2"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
